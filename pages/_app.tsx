@@ -11,7 +11,7 @@ export const GlobalProfileContextDefault = {
   openFrame: false,
   setOpenFrame: (expressInterest: boolean) => {},
   newLink:
-    "https://www.youtube.com/embed/7i0DSB_4e-E?controls=0?rel=0&autoplay=1&mute=1",
+    "https://www.youtube.com/embed/T_enNTKS8Qw?controls=0?rel=0&autoplay=1&mute=1",
 };
 
 export const GlobalContext = createContext(GlobalProfileContextDefault);
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
   const [newLink, setNewLink] = useState(GlobalProfileContextDefault.newLink);
   const streamLinks: string[] = [
-    "https://www.youtube.com/embed/7i0DSB_4e-E?controls=0?rel=0&autoplay=1&mute=1",
+    "https://www.youtube.com/embed/KXf6puIS-bo?controls=0?rel=0&autoplay=1&mute=1",
     "https://www.youtube.com/embed/T_enNTKS8Qw?controls=0?rel=0&autoplay=1&mute=1",
   ];
   useEffect(() => {
