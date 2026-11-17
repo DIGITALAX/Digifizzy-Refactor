@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
-import { FunctionComponent } from "react";
-import { useMediaQuery } from "@material-ui/core";
+import { FunctionComponent, JSX } from "react";
+import useMediaQuery from "../Common/hooks/useMediaQuery";
 
 const Collection: FunctionComponent = (): JSX.Element => {
   const iframes: string[] = ["yt1", "yt2"];
@@ -158,22 +158,17 @@ const Collection: FunctionComponent = (): JSX.Element => {
                   <Link
                     key={index}
                     href={links[index]}
-                    className={`w-fit h-fit place-self-center cursor-sewingHS col-start-${
-                      index + 1
-                    }`}
+                    target={"_blank"}
+                    rel="noreferrer"
+                    className="p-0.5 bg-sapph w-fit h-fit grid grid-flow-col auto-cols-auto cursor-sewingHS"
                   >
-                    <a
-                      target={"_blank"}
-                      rel="noreferrer"
-                      className="p-0.5 bg-sapph w-fit h-fit grid grid-flow-col auto-cols-auto cursor-sewingHS"
-                    >
-                      <Image
-                        width={!queryWindowSizeMobile ? 30 : 50}
-                        height={!queryWindowSizeMobile ? 50 : 70}
-                        src={`/images/${frame}.png`}
-                        className="relative flex col-start-1 place-self-center w-fit h-fit"
-                      />
-                    </a>
+                    <Image
+                      width={!queryWindowSizeMobile ? 30 : 50}
+                      height={!queryWindowSizeMobile ? 50 : 70}
+                      src={`/images/${frame}.png`}
+                      alt={frame}
+                      className="relative flex col-start-1 place-self-center w-fit h-fit"
+                    />
                   </Link>
                 );
               })}

@@ -206,11 +206,3 @@ body {
     background-position: 100% 100%;
   }
 }
-
-#static2 {
-  margin: auto;
-  background-image: url(https://i.stack.imgur.com/uzEM4.png);
-  animation: anim2 2s steps(2, end) infinite both;
-
-  transform: translate3d(0, 0, 0);
-}

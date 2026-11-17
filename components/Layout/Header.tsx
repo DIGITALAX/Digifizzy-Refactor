@@ -1,7 +1,7 @@
-import { FunctionComponent, useContext } from "react";
+import { FunctionComponent, JSX, useContext } from "react";
 import { GlobalContext } from "../../pages/_app";
-import { useMediaQuery } from "@material-ui/core";
-import Image from "next/image";
+import useMediaQuery from "../Common/hooks/useMediaQuery";
+import Image from "next/legacy/image";
 
 const Header: FunctionComponent = (): JSX.Element => {
   const { openFrame, setOpenFrame, newLink } = useContext(GlobalContext);
@@ -21,6 +21,7 @@ const Header: FunctionComponent = (): JSX.Element => {
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 className="cursor-sewingHS"
               ></iframe>
@@ -31,7 +32,7 @@ const Header: FunctionComponent = (): JSX.Element => {
               className="relative w-fit h-fit col-start-2 cursor-sewingHS active:scale-95"
               onClick={() => setOpenFrame(!openFrame)}
             >
-              <Image src="/images/tv.png" width={70} height={45} />
+              <Image src="/images/tv.png" width={70} height={45} alt="tv" />
             </div>
           )}
         </div>

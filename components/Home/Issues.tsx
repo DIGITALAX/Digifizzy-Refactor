@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { FunctionComponent } from "react";
+import Image from "next/legacy/image";
+import { FunctionComponent, JSX } from "react";
 import { AiOutlineForward, AiOutlineBackward } from "react-icons/ai";
 import useIssues from "./hooks/useIssues";
 import Volume from "./Volume";
@@ -45,7 +45,7 @@ const Issues: FunctionComponent = (): JSX.Element => {
                     className={`relative w-fit h-fit col-start-3 place-self-center ${
                       currentIssue !== allIssues.length && "cursor-sewingHS"
                     }`}
-                    onClick={() => handleIssueUp(currentIssue)}
+                    onClick={() => handleIssueUp()}
                   >
                     <AiOutlineForward
                       size={35}
@@ -66,6 +66,7 @@ const Issues: FunctionComponent = (): JSX.Element => {
               <Image
                 src={`/images/magazine/mag${currentIssue}.webp`}
                 layout="fill"
+                alt={`DIGIFIZZY issue ${currentIssue}`}
                 className="bg-sapph"
               />
             </div>

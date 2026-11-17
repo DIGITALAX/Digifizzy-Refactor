@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import DIGIFIZZY from "../components/Home/DIGIFIZZY";
 import Header from "../components/Layout/Header";
 import { createContext, useEffect, useState } from "react";
@@ -11,7 +11,7 @@ export const GlobalProfileContextDefault = {
   openFrame: false,
   setOpenFrame: (expressInterest: boolean) => {},
   newLink:
-    "https://www.youtube.com/embed/T_enNTKS8Qw?controls=0?rel=0&autoplay=1&mute=1",
+    "https://www.youtube-nocookie.com/embed/T_enNTKS8Qw?controls=0?rel=0&autoplay=1&mute=1",
 };
 
 export const GlobalContext = createContext(GlobalProfileContextDefault);
@@ -22,8 +22,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
   const [newLink, setNewLink] = useState(GlobalProfileContextDefault.newLink);
   const streamLinks: string[] = [
-    "https://www.youtube.com/embed/KXf6puIS-bo?controls=0?rel=0&autoplay=1&mute=1",
-    "https://www.youtube.com/embed/T_enNTKS8Qw?controls=0?rel=0&autoplay=1&mute=1",
+    "https://www.youtube-nocookie.com/embed/KXf6puIS-bo?controls=0?rel=0&autoplay=1&mute=1",
+    "https://www.youtube-nocookie.com/embed/T_enNTKS8Qw?controls=0?rel=0&autoplay=1&mute=1",
   ];
   useEffect(() => {
     const shuffledLinks: number[] = shuffle([0, 1]);
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <GlobalContext.Provider value={{ openFrame, setOpenFrame, newLink }}>
       <div className="h-full h-auto min-w-screen w-screen relative selection:bg-skyBlue selection:text-dull cursor-sewingS">
         <div className="absolute w-full h-screen">
-          <Image layout="fill" src={"/images/mask.png"} className="relative" />
+          <Image layout="fill" src={"/images/mask.png"} alt="" className="relative" />
         </div>
         {openFrame && <Stream />}
         <DIGIFIZZY />

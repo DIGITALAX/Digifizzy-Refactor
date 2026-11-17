@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { FunctionComponent } from "react";
-import { useMediaQuery } from "@material-ui/core";
+import Image from "next/legacy/image";
+import { FunctionComponent, JSX } from "react";
+import useMediaQuery from "../Common/hooks/useMediaQuery";
 
 const Screen: FunctionComponent = (): JSX.Element => {
   let queryWindowSizeMobile: boolean = useMediaQuery("(max-width:660px)");
@@ -17,9 +17,16 @@ const Screen: FunctionComponent = (): JSX.Element => {
               objectFit="cover"
               width={1000}
               height={768}
+              alt="DIGIFIZZY screens"
             />
           ) : (
-            <Image src="/images/screens.png" objectFit="cover" width={screen?.width} height={"300"} />
+            <Image
+              src="/images/screens.png"
+              objectFit="cover"
+              width={screen?.width}
+              height={"300"}
+              alt="DIGIFIZZY screens"
+            />
           )}
         </div>
       </div>

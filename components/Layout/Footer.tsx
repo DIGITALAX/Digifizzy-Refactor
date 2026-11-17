@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
-import { FunctionComponent } from "react";
+import { FunctionComponent, JSX } from "react";
 import { BsTwitter } from "react-icons/bs";
 
 const Footer: FunctionComponent = (): JSX.Element => {
@@ -77,62 +77,61 @@ const Footer: FunctionComponent = (): JSX.Element => {
               <div className="relative w-full h-full row-start-2 col-start-1 lg:row-start-1 lg:col-start-2 grid grid-flow-row auto-rows-auto py-10 lg:py-0">
                 <div className="relative w-fit h-fit row-start-1 self-start justify-self-end grid grid-flow-col auto-cols-auto gap-3">
                   <div className="relative w-fit h-fit col-start-1">
-                    <Link href={"https://blog.digitalax.xyz/"}>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        className="cursor-sewingHS h-fit relative pr-1"
-                      >
-                        <Image
-                          src={"/images/mirror.png"}
-                          width={15}
-                          height={20}
-                          priority
-                        />
-                      </a>
+                    <Link
+                      href={"https://blog.digitalax.xyz/"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="cursor-sewingHS h-fit relative pr-1"
+                    >
+                      <Image
+                        src={"/images/mirror.png"}
+                        width={15}
+                        height={20}
+                        alt="blog"
+                        priority
+                      />
                     </Link>
                   </div>
                   <div className="relative w-fit h-fit col-start-2">
-                    <Link href={"https://github.com/digitalax"}>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        className="cursor-sewingHS h-fit relative pr-1"
-                      >
-                        <Image
-                          src={"/images/github.png"}
-                          width={20}
-                          height={19}
-                          priority
-                        />
-                      </a>
+                    <Link
+                      href={"https://github.com/digitalax"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="cursor-sewingHS h-fit relative pr-1"
+                    >
+                      <Image
+                        src={"/images/github.png"}
+                        width={20}
+                        height={19}
+                        alt="github"
+                        priority
+                      />
                     </Link>
                   </div>
                   <div className="relative w-fit h-fit col-start-3 pr-1">
-                    <Link href={"https://lenster.xyz/u/digitalax.lens"}>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        className="cursor-sewingHS h-fit relative"
-                      >
-                        <Image
-                          src={"/images/lens.png"}
-                          width={20}
-                          height={20}
-                          priority
-                        />
-                      </a>
+                    <Link
+                      href={"https://cypher.digitalax.xyz/autograph/digitalax"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="cursor-sewingHS h-fit relative"
+                    >
+                      <Image
+                        src={"/images/lens.png"}
+                        width={20}
+                        height={20}
+                        alt="lens"
+                        priority
+                      />
                     </Link>
                   </div>
                   <div className="relative w-fit h-fit col-start-4">
-                    <Link href={"https://twitter.com/digitalax_"}>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        className="cursor-sewingHS h-fit relative"
-                      >
-                        <BsTwitter size={20} color={"#FFDCFF"} />
-                      </a>
+                    <Link
+                      href={"https://twitter.com/digitalax_"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="cursor-sewingHS h-fit relative"
+                    >
+                      <BsTwitter size={20} color={"#FFDCFF"} />
                     </Link>
                   </div>
                 </div>

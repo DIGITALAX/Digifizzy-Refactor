@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { FunctionComponent } from "react";
+import { FunctionComponent, JSX } from "react";
 
 const Custom404: FunctionComponent = (): JSX.Element => {
   const router = useRouter();

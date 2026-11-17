@@ -6,28 +6,18 @@ class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          <meta name="og:url" content="https://digifizzy.xyz/" />
-          <meta name="og:title" content="DIGIFIZZY" />
-          <meta name="og:description" content="Web3 Metaverse Zine" />
-          <meta name="og:image" content="https://digifizzy.xyz/card.png/" />
-          <meta name="twitter:card" content="summary" />
-          <meta name="og:url" content="https://digifizzy.xyz/" />
-          <meta name="og:image" content="https://digifizzy.xyz/card.png/" />
+          <meta property="og:url" content="https://digifizzy.xyz/" />
+          <meta property="og:title" content="DIGIFIZZY" />
+          <meta property="og:description" content="Web3 Metaverse Zine" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@igitalax_" />
+          <meta name="twitter:site" content="@digitalax_" />
           <meta name="twitter:creator" content="@digitalax_" />
           <meta
             name="twitter:image"
-            content="https://digifizzy.xyz/card.png/"
+            content="https://digifizzy.xyz/card.png"
           />
           <meta name="twitter:url" content="https://digifizzy.xyz/" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="canonical" href="https://digifizzy.xyz/" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
           <style
             dangerouslySetInnerHTML={{
               __html: `

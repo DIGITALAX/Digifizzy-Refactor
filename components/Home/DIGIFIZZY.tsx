@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, JSX } from "react";
 
 const DIGIFIZZY: FunctionComponent = (): JSX.Element => {
   return (
